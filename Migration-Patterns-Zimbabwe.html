@@ -141,13 +141,13 @@
             -->
               <!--Change here 2-->
               <h2 class="title">
-                Inter-Provincial Lifetime Migration Proportion Matrix for Population by Province
+                Inter-Provincial Lifetime Migration Proportion Matrix for Population by Province :Total
               </h2>
 
               <div class="meta-top">
                 <ul>
                   <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">Belenga Dev</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2020-01-01">Dec 23, 2023</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2020-01-01">Apr 24, 2024</time></a></li>
                   <!--<li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12 Comments</a></li>-->
                 </ul>
                 
@@ -156,6 +156,7 @@
             <div>
                 
                 <div id="chart-container"></div>
+                <div id="chart-containerfemale"></div>
                  
                
                   <h7>
@@ -253,9 +254,9 @@
   <script src="assets/js/chart.js"></script>
       
        
-        <script type="text/javascript">
-          const dataSource = {
-  chart: {
+  <script type="text/javascript">
+    const dataSource = {
+      chart: {
     caption: " Inter-Provincial Lifetime Migration Proportion Matrix for Population by Province",
     subcaption: "in Zimbabwe",
     nodelabelposition: "outside",
@@ -263,9 +264,9 @@
     theme: "candy",
     mode: "post",
     linkcolorbydominance: "1",
-    animation: "0"
+    animation: "2"
   },
-  nodes: [
+      nodes: [
           {
             label: "Bulawayo"
           },
@@ -297,7 +298,7 @@
             label: "Harare"
           }
   ],
-  links: [
+      links: [
               //Bulawayo
 {
   from:"Bulawayo",
@@ -811,10 +812,13 @@
 
 
         ]
-};
+    };
 
-FusionCharts.ready(function() {
-  var myChart = new FusionCharts({
+
+
+    FusionCharts.ready(function() {
+
+    var myChart = new FusionCharts({
     type: "chord",
     renderAt: "chart-container",
     width: "100%",
@@ -822,9 +826,14 @@ FusionCharts.ready(function() {
     dataFormat: "json",
     dataSource
   }).render();
+
+    
 });
 
-        </script>
+</script>
+
+
+
 
 </body>
 
