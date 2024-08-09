@@ -1,136 +1,30 @@
-/* style.css */
 body {
   font-family: 'Roboto', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-  height: 100vh;
+  background-color: #f4f4f4;
 }
 
 .main-container {
-  text-align: center;
-  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 h1 {
-  color: #333;
-  font-size: 2em;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  border: 1px solid #ddd;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-.chart-container {
-  width: 50%;
-  padding-right: 20px;
-}
-
-.items-container {
-  width: 50%;
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-#itemsList {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  font-size: 24px;
 }
 
 #itemsList li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-}
-
-#itemsList li span {
-  flex: 1;
-  text-align: left;
-  color: #555;
 }
 
 #itemsList li input[type="number"] {
-  width: 60px;
-  padding: 5px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-right: 10px;
+  max-width: 80px;
+  text-align: right;
 }
 
-#itemsList li button {
-  background: none;
-  border: none;
-  color: red;
-  cursor: pointer;
-  font-size: 1.2em;
-}
-
-.total-container {
-  margin-top: 20px;
-  font-size: 1.2em;
-  font-weight: 500;
-  color: #333;
-}
-
-.add-item {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.add-item input {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-right: 10px;
-  flex: 1;
-}
-
-.add-item input[type="number"] {
-  width: 100px;
-}
-
-.add-item button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 1em;
-  cursor: pointer;
-}
-
-.add-item button:hover {
-  background-color: #0056b3;
-}
-
-#toggleButton {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #28a745;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 1em;
-  cursor: pointer;
-}
-
-#toggleButton:hover {
-  background-color: #218838;
+button:hover {
+  background-color: #45a049;
 }
