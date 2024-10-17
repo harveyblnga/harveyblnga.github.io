@@ -165,49 +165,70 @@
   <main id="main">
 
     <!-- ======= About Us Section ======= -->
-    <!--
+    
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-header">
-          <h2>About Us</h2>
-          <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat sunt id nobis omnis tiledo stran delop</p>
-        </div>
+         <div>
+                <canvas id="myChart"></canvas>
+                  <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                          Select a Religion
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        
+                          <li>
+                                  <a class="dropdown-item" onclick="handleSelection('1')" >Roman Catholic</a>
+                              </li>
+                          <li>
+                                  <a class="dropdown-item" onclick="handleSelection('2')" >African Tradition</a>
+                              </li>
+                          <li>
+                                  <a class="dropdown-item" onclick="handleSelection('3')" >Protestant</a>
+                              </li>
+                          <li>
+                                  <a class="dropdown-item" onclick="handleSelection('4')" >Apostolic Sect</a>
+                              </li>
+                          <li>
+                                  <a class="dropdown-item" onclick="handleSelection('5')" >Pentecost</a>
+                              </li>
+                          <li>
+                                  <a class="dropdown-item" onclick="handleSelection('6')" >Other Christian</a>
+                          </li>
+                          <li>
+                              <a class="dropdown-item" onclick="handleSelection('7')" >Islam</a>
+                          </li>
 
-        <div class="row gy-4">
-          <div class="col-lg-6">
-            <h3>Voluptatem dignissimos provident quasi corporis</h3>
-            <img src="assets/img/about.jpg" class="img-fluid rounded-4 mb-4" alt="">
-            <p>Ut fugiat ut sunt quia veniam. Voluptate perferendis perspiciatis quod nisi et. Placeat debitis quia recusandae odit et consequatur voluptatem. Dignissimos pariatur consectetur fugiat voluptas ea.</p>
-            <p>Temporibus nihil enim deserunt sed ea. Provident sit expedita aut cupiditate nihil vitae quo officia vel. Blanditiis eligendi possimus et in cum. Quidem eos ut sint rem veniam qui. Ut ut repellendus nobis tempore doloribus debitis explicabo similique sit. Accusantium sed ut omnis beatae neque deleniti repellendus.</p>
-          </div>
-          <div class="col-lg-6">
-            <div class="content ps-0 ps-lg-5">
-              <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
-              <ul>
-                <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-              </ul>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-              </p>
+                          <li>
+                              <a class="dropdown-item" onclick="handleSelection('8')" >Judaism</a>
+                          </li>
 
-              <div class="position-relative mt-4">
-                <img src="assets/img/about-2.jpg" class="img-fluid rounded-4" alt="">
-                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+                          <li>
+                              <a class="dropdown-item" onclick="handleSelection('9')" >Hinduism</a>
+                          </li>
+                          <li>
+                              <a class="dropdown-item" onclick="handleSelection('10')" >None</a>
+                          </li>
+                          <li>
+                              <a class="dropdown-item" onclick="handleSelection('11')" >Other</a>
+                          </li>
+                      </ul>
+                  </div>
+               
+                  <h7>
+                      Interactive chart showing religion in each province by Gender
+                  </h7>
               </div>
-            </div>
-          </div>
-        </div>
+
 
       </div>
+        <div class="content">
+                <p>
+   
+                </p>
+        </div>
     </section>
-    -->
+    
     <!-- End About Us Section -->
 
     <!-- ======= Clients Section ======= -->
@@ -1144,6 +1165,225 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="assets/js/chart.js"></script>
+        <script>
+            //const ctx = document.getElementById('myChart');
+            //new Chart(ctx, {
+            //const myChart = new Chart("myChart",
+            const myChart = new Chart("myChart", {
+                type: 'line',
+                    data: {
+                            labels: [
+                            "Bulawayo",'Manicaland','Mashonaland Central','Mashonaland East','Mashonaland West','Matabeleland North','Matabeleland South','Midlands','Masvingo','Harare'
+                            ],
+                            datasets: [
+                                {
+                                label: 'Male',
+                                data: [9315,55759,76123,51829,70976,33774,28438,45708,37581,44835],
+                                borderWidth: 1,
+                                borderColor: '#36A2EB',
+                                backgroundColor: '#9BD0F5'
+                                
+
+                                },
+                                {
+                                label: 'Female',
+                                data: [6638,42117,45331,32511,44844,24618,19480,31152,27450,34181,],
+                                borderWidth: 1,
+                                borderColor: '#FF6384',
+                                backgroundColor: '#FFB1C1'
+                                }
+                            ]
+                            
+                        },
+                    options: {
+                        plugins: {
+                            title: {
+                                display: true, // Show the title (default: false)
+                                text: 'African Traditional Religion', // Text to display
+                                color: 'black', // Title text color
+                                position: 'top', // Title position (top, bottom)
+                                fontSize: 16, // Font size
+                                fontStyle: 'bold', // Font style
+                                padding: {
+                                top: 10, // Padding above the title
+                                bottom: 5 // Padding below the title
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+            });
+        </script>
+        <script>
+            function handleSelection(selectedText) {
+                // Do something with the selected text
+                console.log("Selected Text: ", selectedText);
+                // You can pass the selected text to another function or perform any other actions here
+
+                if (selectedText === "1") { // Replace with your desired option text
+                        
+                        //Roman Catholic 
+                        //Male
+                       myChart.data.datasets[0].data = [26939,47339,21141,52212,48244,23818,13639,72823,58949,104229]; // New data
+                        //Female 
+                        myChart.data.datasets[1].data = [29578,51042,22888,56409,50285,26324,14511,76924,65573,112621]; // New data
+                        //Update Title
+                        myChart.options.plugins.title.text='Roman Catholic'
+                        //upadate chart
+                        myChart.update();
+
+                    }
+                    else if (selectedText === "2"){
+                        // African Traditional Religion
+                        //Male
+                        myChart.data.datasets[0].data = [9315,55759,76123,51829,70976,33774,28438,45708,37581,44835,]; // New data
+                        //Female 
+                        myChart.data.datasets[1].data = [6638,42117,45331,32511,44844,24618,19480,31152,27450,34181]; // New data
+                        //Update Title
+                        myChart.options.plugins.title.text='African Traditional Religion'
+                        //upadate chart
+                        myChart.update();
+
+                    }
+                    else if (selectedText === "3"){
+                        // Protestant
+                        //Male
+                        myChart.data.datasets[0].data = [58914,144590,44914,92545,104358,40014,43168,136767,82245,195529]; // New data
+                        //Female 
+                        myChart.data.datasets[1].data = [75646,168387,57337,114190,127361,47534,53701,163436,101321,237778]; // New data
+                        //Update Title
+                        myChart.options.plugins.title.text='Protestant'
+                        //upadate chart
+                        myChart.update();
+
+                    }
+                    else if (selectedText === "4"){
+                        // Apostolic Sect
+                        //Male
+                        myChart.data.datasets[0].data = [61175,465296,329350,359630,359038,126348,108904,330050,315541,306167]; // New data
+                        //Female 
+                        myChart.data.datasets[1].data = [80160,558517,409340,435726,434299,157890,137262,394460,389556,353794]; // New data
+                        //Update Title
+                        myChart.options.plugins.title.text='Apostolic Sect'
+                        //upadate chart
+                        myChart.update();
+
+                    }
+                    else if (selectedText === "5"){
+                        // Pentecost
+                        //Male
+                        myChart.data.datasets[0].data = [70352,130697,63817,126143,133600,58617,41230,115909,89388,303580]; // New data
+                        //Female 
+                        myChart.data.datasets[1].data = [95414,161471,81894,159659,169512,77106,54303,146891,115732,387250]; // New data
+                        //Update Title
+                        myChart.options.plugins.title.text='Pentecost'
+                        //upadate chart
+                        myChart.update();
+
+                    }
+                    else if (selectedText === "6"){
+                        // Other Christian
+                        //Male
+                        myChart.data.datasets[0].data = [39449,45792,21162,36170,41049,49562,54787,69517,114073,67082]; // New data
+                        //Female 
+                        myChart.data.datasets[1].data = [48274,52980,24662,41804,45750,59909,67720,80855,140577,76339]; // New data
+                        //Update Title
+                        myChart.options.plugins.title.text='Other Christian'
+                        //upadate chart
+                        myChart.update();
+
+                    }
+
+
+                    else if (selectedText === "7"){
+                        // Islam 
+                        //Male
+                        myChart.data.datasets[0].data = [1162,5392,7356,6303,10112,312,462,2884,1518,8809]; // New data
+                        //Female 
+                        myChart.data.datasets[1].data = [1012,5218,8024,6434,10624,240,358,2681,1436,8291]; // New data
+                        //Update Title
+                        myChart.options.plugins.title.text='Islam'
+                        //upadate chart
+                        myChart.update();
+
+                    }
+
+                    else if (selectedText === "8"){
+                        // Judaism 
+                        //Male
+                        myChart.data.datasets[0].data = [75,529,271,110,154,61,147,1248,514,283]; // New data
+                        //Female 
+                        myChart.data.datasets[1].data = [59,576,267,108,143,68,139,1330,480,283]; // New data
+                        //Update Title
+                        myChart.options.plugins.title.text='Judaism'
+                        //upadate chart
+                        myChart.update();
+
+                    }
+                    else if (selectedText === "9"){
+                        // Hinduism 
+                        //Male
+                        myChart.data.datasets[0].data = [257,127,61,121,187,72,49,149,64,838]; // New data
+                        //Female 
+                        myChart.data.datasets[1].data = [249,90,36,87,139,39,23,89,35,713]; // New data
+                        //Update Title
+                        myChart.options.plugins.title.text='Hinduism'
+                        //upadate chart
+                        myChart.update();
+
+                    }
+                    else if (selectedText === "10"){
+                        // None 
+                        //Male
+                        myChart.data.datasets[0].data = [35949,65584,115253,106866,160766,60311,71610,87383,56575,121733]; // New data
+                        //Female 
+                        myChart.data.datasets[1].data = [15784,26817,51821,45585,69037,25197,31021,34258,24293,49735,]; // New data
+                        //Update Title
+                        myChart.options.plugins.title.text='None'
+                        //upadate chart
+                        myChart.update();
+
+                    }
+                    else if (selectedText === "11"){
+                        // Other 
+                        //Male
+                        myChart.data.datasets[0].data = [4284,4245,1798,3163,6156,7124,8083,7992,6965,6265]; // New data
+                        //Female 
+                        myChart.data.datasets[1].data = [5267,5138,2045,3568,6950,8707,11310,9399,8662,6896]; // New data
+                        //Update Title
+                        myChart.options.plugins.title.text='Other'
+                        //upadate chart
+                        myChart.update();
+
+                    }
+
+
+
+
+
+
+            }
+            /*
+            var dropdown = document.getElementById("dropdownMenuButton");
+            //var dropdown = document.querySelector('.dropdown-menu a.dropdown-item.active').textContent;
+                dropdown.addEventListener("click", function() {
+                    // Get the selected option
+                    var selectedOption = document.querySelector('.dropdown-menu li.dropdown-item') // Assuming "active" class is used
+                    console.log(selectedOption )
+                    if (selectedOption && selectedOption.textContent === "Action") { // Replace with your desired option text
+                        alert("You selected the specific option!");
+                    }else{
+                        alert("No this is not it You selected the specific option!");
+                    }
+                });
+                */
+        </script>
 
 </body>
 
