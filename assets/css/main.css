@@ -2932,6 +2932,10 @@ section {
   line-height: 1.25;
 }
 
+.hero.hero-refresh {
+  min-height: 520px;
+}
+
 .hero-refresh .hero-kicker {
   color: rgba(255, 255, 255, 0.85);
   font-size: 15px;
@@ -2968,6 +2972,7 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 14px;
   color: #fff;
+  min-height: 380px;
   padding: 24px;
 }
 
@@ -3078,7 +3083,12 @@ section {
     display: none;
   }
 
+  .hero.hero-refresh {
+    min-height: auto;
+  }
+
   .systems-map {
+    min-height: 0;
     margin-top: 20px;
   }
 }
