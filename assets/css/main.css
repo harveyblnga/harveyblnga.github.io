@@ -958,6 +958,23 @@ section {
   position: relative;
 }
 
+#tools .service-item .icon .tool-logo {
+  width: 56px !important;
+  height: 56px !important;
+  max-width: 56px !important;
+  max-height: 56px !important;
+  min-width: 56px;
+  min-height: 56px;
+  object-fit: contain;
+  z-index: 2;
+  position: relative;
+  display: block;
+}
+
+#tools .service-item .icon:before {
+  display: none;
+}
+
 .services .service-item .icon:before {
   position: absolute;
   content: "";
@@ -1001,6 +1018,219 @@ section {
 
 .services .service-item:hover h3 {
   border-color: var(--color-primary);
+}
+
+#core-infrastructure .service-item {
+  border: 1px solid rgba(0, 131, 116, 0.14);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+#core-infrastructure .service-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 36px rgba(0, 0, 0, 0.12);
+  border-color: var(--color-primary);
+}
+
+#core-infrastructure .core-infra-final {
+  margin-top: 8px;
+}
+
+/*--------------------------------------------------------------
+# Platforms Page
+--------------------------------------------------------------*/
+#core-infrastructure-page .infra-support-copy {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#core-infrastructure-page .infra-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 0 auto 30px;
+}
+
+#core-infrastructure-page .flow-step {
+  border: 1px solid #d5e2e6;
+  background: #f6fbfc;
+  color: #45525f;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+#core-infrastructure-page .flow-arrow {
+  color: #70808e;
+  font-size: 20px;
+}
+
+#core-infrastructure-page .infra-layers-heading {
+  margin: 6px 0 18px;
+  text-align: center;
+  font-size: 22px;
+}
+
+#core-infrastructure-page .infra-card {
+  border: 1px solid rgba(16, 52, 70, 0.14);
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+#core-infrastructure-page .infra-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 36px rgba(0, 0, 0, 0.12);
+  border-color: rgba(0, 131, 116, 0.45);
+}
+
+#core-infrastructure-page .infra-card .icon {
+  margin-bottom: 24px;
+}
+
+#core-infrastructure-page .infra-card .icon:before {
+  display: none;
+}
+
+#core-infrastructure-page .infra-card .icon i {
+  font-size: 36px;
+}
+
+#core-infrastructure-page .infra-card h3 {
+  border-bottom: none;
+  display: block;
+  margin: 0 0 14px;
+  padding-bottom: 0;
+  font-size: 24px;
+}
+
+#core-infrastructure-page .infra-card p {
+  font-size: 15px;
+  line-height: 1.75;
+  margin-bottom: 13px;
+}
+
+#core-infrastructure-page .infra-card .infra-powers {
+  margin-bottom: 20px;
+  color: #425769;
+  font-size: 14px;
+}
+
+#core-infrastructure-page .infra-payment .icon i {
+  color: #2d7c6f;
+}
+
+#core-infrastructure-page .infra-fulfillment .icon i {
+  color: #2f7a96;
+}
+
+#core-infrastructure-page .infra-data .icon i {
+  color: #5c6fb2;
+}
+
+#core-infrastructure-page .infra-messaging .icon i {
+  color: #2e8f7a;
+}
+
+#core-infrastructure-page .infra-automation .icon i {
+  color: #7f6aa8;
+}
+
+#core-infrastructure-page .infra-connector {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 34px 0 20px;
+  text-transform: uppercase;
+  color: #667788;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+#core-infrastructure-page .infra-connector::before,
+#core-infrastructure-page .infra-connector::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #cbd8de;
+}
+
+#core-infrastructure-page .powered-strip {
+  background: #ffffff;
+  border: 1px solid #d5e2e6;
+  border-radius: 14px;
+  text-align: center;
+  padding: 26px 22px;
+}
+
+#core-infrastructure-page .powered-strip h3 {
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+
+#core-infrastructure-page .powered-list {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+#core-infrastructure-page .powered-list a {
+  color: #1d2b36;
+}
+
+#core-infrastructure-page .powered-list span {
+  margin: 0 8px;
+  color: #6a7a86;
+}
+
+#core-infrastructure-page .powered-note {
+  margin: 0 auto;
+  max-width: 860px;
+}
+
+#platform-projects .platform-project-card {
+  border: 1px solid rgba(16, 52, 70, 0.14);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+#platform-projects .platform-project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 131, 116, 0.45);
+}
+
+#platform-projects .platform-project-card h3 {
+  border-bottom: none;
+  display: block;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 991px) {
+  #core-infrastructure-page .infra-layers-heading {
+    text-align: left;
+  }
+
+  #core-infrastructure-page .powered-list {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  #core-infrastructure-page .flow-step {
+    font-size: 12px;
+  }
+
+  #core-infrastructure-page .powered-list span {
+    display: none;
+  }
+
+  #core-infrastructure-page .powered-list a {
+    display: block;
+    margin-bottom: 8px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -2677,4 +2907,325 @@ section {
   grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
   grid-gap :1px;
   > div {}
+}
+
+/*--------------------------------------------------------------
+# Belenga Refresh
+--------------------------------------------------------------*/
+.brand-logo {
+  max-height: 44px;
+  margin-right: 10px;
+}
+
+.brand-mark {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-mark h1 {
+  margin: 0;
+}
+
+.brand-mark small {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
+  line-height: 1.25;
+}
+
+.hero-refresh .hero-kicker {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.hero-actions {
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.btn-secondary-hero {
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  border-radius: 50px;
+  color: #fff;
+  font-family: var(--font-primary);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 13px 28px;
+  transition: 0.3s;
+}
+
+.btn-secondary-hero:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-color: #fff;
+  color: #fff;
+}
+
+.systems-map {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  color: #fff;
+  padding: 24px;
+}
+
+.systems-map h3 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.systems-map p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 16px;
+}
+
+.systems-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.systems-row span {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 10px;
+}
+
+.systems-arrow {
+  text-align: center;
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.systems-markets span {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.homepage-cta-link {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.how-we-work {
+  padding: 70px 0;
+}
+
+.workflow-step {
+  background: #fff;
+  border: 1px solid #e3f0ee;
+  border-radius: 12px;
+  height: 100%;
+  padding: 24px 20px;
+}
+
+.workflow-step span {
+  align-items: center;
+  background: var(--color-primary);
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  font-size: 18px;
+  font-weight: 700;
+  height: 40px;
+  justify-content: center;
+  margin-bottom: 14px;
+  width: 40px;
+}
+
+.workflow-step h4 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.project-dot {
+  color: #2cc18c;
+  font-size: 14px;
+}
+
+.capability-tile {
+  border-top: 3px solid rgba(0, 131, 116, 0.4);
+}
+
+.about-preview-image {
+  max-width: 420px;
+}
+
+.cta-refresh .cta-btn {
+  margin: 8px;
+}
+
+.cta-refresh .cta-btn-secondary {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.cta-refresh .cta-btn-secondary:hover {
+  border-color: #fff;
+}
+
+@media (max-width: 991px) {
+  .brand-logo {
+    max-height: 36px;
+  }
+
+  .brand-mark small {
+    display: none;
+  }
+
+  .systems-map {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .brand-mark small {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .navbar>ul>li {
+    padding: 10px 0 10px 16px;
+  }
+
+  .navbar a,
+  .navbar a:focus {
+    font-size: 14px;
+  }
+}
+
+/* Belenga homepage refresh */
+.brand-mark .site-title {
+  color: #fff;
+  display: inline-block;
+  font-family: var(--font-secondary);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.systems-map {
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+}
+
+.systems-intro {
+  margin-bottom: 14px;
+}
+
+.systems-layer-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.systems-layer-head {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.systems-layer-head span {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 700;
+  height: 24px;
+  justify-content: center;
+  width: 24px;
+}
+
+.systems-layer-head h4 {
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+}
+
+.systems-chip {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.82);
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 6px 10px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.systems-row,
+.systems-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.systems-row a,
+.systems-items a,
+.systems-row span,
+.systems-items span {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.82);
+  display: inline-flex;
+  opacity: 1;
+  padding: 6px 10px;
+  text-decoration: none;
+}
+
+.systems-row a:hover,
+.systems-items a:hover,
+.systems-row a:focus-visible,
+.systems-items a:focus-visible,
+.systems-chip:hover,
+.systems-chip:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.95);
+  outline: none;
+}
+
+.systems-chip.is-static {
+  cursor: default;
+}
+
+.systems-markets .systems-chip {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.systems-arrow {
+  font-size: 16px;
+  margin: 8px 0;
+  opacity: 0.85;
+}
+
+.systems-map-link {
+  color: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 10px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.systems-map-link:hover,
+.systems-map-link:focus {
+  color: #fff;
 }

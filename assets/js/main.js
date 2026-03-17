@@ -65,6 +65,34 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('scroll', navbarlinksActive);
 
   /**
+   * Navbar links active state for page URLs
+   */
+  function navbarlinksPageActive() {
+    let currentPath = window.location.pathname.split('/').pop();
+    if (!currentPath) currentPath = 'index.html';
+
+    navbarlinks.forEach(navbarlink => {
+      let href = navbarlink.getAttribute('href');
+      if (!href) return;
+      if (href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+
+      let targetPath = href.split('#')[0];
+      if (!targetPath) return;
+
+      if (targetPath === currentPath) {
+        navbarlink.classList.add('active');
+
+        let parentMenu = navbarlink.closest('ul');
+        if (parentMenu && parentMenu.parentElement && parentMenu.parentElement.classList.contains('dropdown')) {
+          let dropdownAnchor = parentMenu.parentElement.querySelector('a');
+          if (dropdownAnchor) dropdownAnchor.classList.add('active');
+        }
+      }
+    });
+  }
+  window.addEventListener('load', navbarlinksPageActive);
+
+  /**
    * Mobile nav toggle
    */
   const mobileNavShow = document.querySelector('.mobile-nav-show');
